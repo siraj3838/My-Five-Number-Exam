@@ -59,7 +59,7 @@
                     <!-- item div Kitchenware -->
                     <div class="grid grid-cols-1 sm:grid-cols-3 p-5 lg:p-0 lg:grid-cols-3 gap-5">
                         <!-- first product -->
-                        <div onclick="toTouch(this)">
+                        <div onclick="toTouch(this); toTouch2(this)">
                             <div class="p-4 bg-white text-center rounded-lg">
                                 <!-- Product image -->
                                 <div class="bg-[#1111110D] flex justify-center py-8">
@@ -83,7 +83,7 @@
                         </div>
 
                         <!-- Second product -->
-                        <div onclick="toTouch(this)">
+                        <div onclick="toTouch(this); toTouch2(this)">
                             <div class="p-4 bg-white text-center rounded-lg">
                                 <!-- Product image -->
                                 <div class="bg-[#1111110D] flex justify-center py-7">
@@ -101,13 +101,13 @@
                                     </div>
                                 </div>
                                 <!-- Product Name -->
-                                <h3 class="mt-1 text-[#111111] text-base font-semibold">K. Accessories</h3>
+                                <h3 class="mt-1 text-[#111111] text-base font-semibold">K. Accessories Second</h3>
                                 <p class="text-[#11111180]"><span>25.00</span>TK</p>
                             </div>
                         </div>
 
                         <!-- third product -->
-                        <div onclick="toTouch(this)">
+                        <div onclick="toTouch(this); toTouch2(this)">
                             <div class="p-4 bg-white text-center rounded-lg">
                                 <!-- Product image -->
                                 <div class="bg-[#1111110D] flex justify-center py-8">
@@ -139,7 +139,7 @@
                     <!-- item div Kitchenware -->
                     <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-5 p-5 lg:p-0">
                         <!-- first product -->
-                        <div onclick="toTouch2(this)">
+                        <div onclick="toTouch(this); toTouch3(this)">
                             <div class="p-4 bg-white text-center rounded-lg">
                                 <!-- Product image -->
                                 <div class="bg-[#1111110D] flex justify-center py-8">
@@ -163,7 +163,7 @@
                         </div>
 
                         <!-- Second product -->
-                        <div onclick="toTouch2(this)">
+                        <div onclick="toTouch(this); toTouch3(this)">
                             <div class="p-4 bg-white text-center rounded-lg">
                                 <!-- Product image -->
                                 <div class="bg-[#1111110D] flex justify-center py-6">
@@ -187,7 +187,7 @@
                         </div>
 
                         <!-- third product -->
-                        <div onclick="toTouch2(this)">
+                        <div onclick="toTouch(this); toTouch3(this)">
                             <div class="p-4 bg-white text-center rounded-lg">
                                 <!-- Product image -->
                                 <div class="bg-[#1111110D] flex justify-center py-[30px]">
@@ -218,7 +218,7 @@
                     <!-- item div Kitchenware -->
                     <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-5 p-5 lg:p-0">
                         <!-- first product -->
-                        <div onclick="toTouch3(this)">
+                        <div onclick="toTouch(this); toTouch4(this)">
                             <div class="p-4 bg-white text-center rounded-lg">
                                 <!-- Product image -->
                                 <div class="bg-[#1111110D] flex justify-center py-7">
@@ -242,7 +242,7 @@
                         </div>
 
                         <!-- Second product -->
-                        <div onclick="toTouch3(this)">
+                        <div onclick="toTouch(this); toTouch4(this)">
                             <div class="p-4 bg-white text-center rounded-lg">
                                 <!-- Product image -->
                                 <div class="bg-[#1111110D] flex justify-center py-8">
@@ -266,7 +266,7 @@
                         </div>
 
                         <!-- third product -->
-                        <div onclick="toTouch3(this)">
+                        <div onclick="toTouch(this); toTouch4(this)">
                             <div class="p-4 bg-white text-center rounded-lg">
                                 <!-- Product image -->
                                 <div class="bg-[#1111110D] flex justify-center py-[35px]">
@@ -322,11 +322,11 @@
                     <!-- this is Calculate Total Price Return div -->
                     <div class="mt-2.5 text-center lg:text-left">
 
-                        <h3 class="text-[#111111] text-lg font-medium mb-1">Total price: <span>00</span>TK</h3>
+                        <h3 class="text-[#111111] text-lg font-medium mb-1">Total price: <span id="total-price-output">0</span>.00TK</h3>
 
-                        <h3 class="text-[#111111] text-lg font-medium mb-1">Discount: <span>00</span>TK</h3>
+                        <h3 class="text-[#111111] text-lg font-medium mb-1">Discount: <span>0</span>.00TK</h3>
 
-                        <h3 class="text-[#111111] text-lg font-medium mb-3">Total: <span>00</span>TK</h3>
+                        <h3 class="text-[#111111] text-lg font-medium mb-3">Total: <span>0</span>.00TK</h3>
                         <hr class="pb-4">
                     </div>
                     <!-- Make Purchase btn div  -->
