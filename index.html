@@ -300,10 +300,10 @@
                 <div class="bg-white mb-6 p-6">
                     <h3 class="text-[#111111] font-medium text-lg lg:text-left text-center">Have coupon?</h3>
                     <div class="flex justify-center mt-4">
-                        <input class="border-2 h-12 w-56 rounded-tl-lg rounded-bl-lg text-sm pl-4 text-[#11111166]" type="name" placeholder="Coupon code">
-                        <button
+                        <input id="input-value" class="border-2 h-12 w-56 rounded-tl-lg rounded-bl-lg text-sm pl-4 text-[#11111166]" type="name" placeholder="Coupon code">
+                        <button id="discount-button"
                             class="btn btn-secondary rounded-tr-lg rounded-br-lg
-                            rounded-tl-none rounded-bl-none text-[#FFFFFF] text-[10px] lg:text-base font-semibold sm:text-sm">Apply</button>
+                            rounded-tl-none rounded-bl-none text-[#FFFFFF] text-[10px] lg:text-base font-semibold sm:text-sm" disabled>Apply</button>
                     </div>
                 </div>
 
@@ -322,17 +322,17 @@
                     <!-- this is Calculate Total Price Return div -->
                     <div class="mt-2.5 text-center lg:text-left">
 
-                        <h3 class="text-[#111111] text-lg font-medium mb-1">Total price: <span id="total-price-output">0</span>.00TK</h3>
+                        <h3 class="text-[#111111] text-lg font-medium mb-1">Total price: <span id="total-price-output">0.00</span>TK</h3>
 
-                        <h3 class="text-[#111111] text-lg font-medium mb-1">Discount: <span>0</span>.00TK</h3>
+                        <h3 class="text-[#111111] text-lg font-medium mb-1">Discount: <span id="total-discount-output">0.00</span>TK</h3>
 
-                        <h3 class="text-[#111111] text-lg font-medium mb-3">Total: <span>0</span>.00TK</h3>
+                        <h3 class="text-[#111111] text-lg font-medium mb-3">Total: <span>0.00</span>TK</h3>
                         <hr class="pb-4">
                     </div>
                     <!-- Make Purchase btn div  -->
                     <div class="absolute ml-11 sm:ml-9 lg:ml-1">
-                        <button
-                            class="btn btn-secondary text-[#FFFFFF] text-[10px] lg:text-base font-semibold sm:text-sm px-20 sm:px-60 lg:px-20 rounded-none">Make
+                        <button id="purchase-btn"
+                            class="btn btn-secondary text-[#FFFFFF] text-[10px] lg:text-base font-semibold sm:text-sm px-20 sm:px-60 lg:px-20 rounded-none" disabled>Make
                             Purchase</button>
                     </div>
                 </div>
