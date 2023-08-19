@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Five Number Exam</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Work+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+<style>
+    body {
+        font-family: 'Lato', sans-serif;
+        font-family: 'Work Sans', sans-serif;
+    }
+</style>
+
 <body>
-    
+    <header class="bg-[#F9F6E2]">
+        <!-- this is my banner div  -->
+        <div class="max-w-screen-2xl mx-auto flex justify-center items-center gap-1 lg:gap-5 text-center p-6 lg:p-0 lg:py-4">
+            <!-- this is banner content -->
+            <div class="space-y-2 sm:space-y-6 lg:space-y-11 flex-1">
+                <h3 class="text-[#111111] sm:text-xl lg:text-2xl font-medium">---SALE FEVER---</h3>
+                <h1 class="text-[#111111] sm:text-3xl lg:text-5xl font-bold">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20% off</span>
+                </h1>
+                <!-- this is promo code div -->
+                <div class="flex justify-center items-center gap-2 lg:pl-5 lg:gap-4">
+                    <p class="text-[#111111] font-medium lg:text-base text-[10px] sm:text-sm">Use Promo Code</p>
+                    <button class="btn btn-secondary text-[#FFFFFF] text-[12px] lg:text-base font-semibold sm:text-sm px-2">SELL200</button>
+                </div>
+            </div>
+            <!-- this is banner image -->
+            <div class="flex-1">
+                <img class="lg:max-w-2xl" src="Summer 1.png" alt="">
+            </div>
+        </div>
+    </header>
+
 
     <script src="index.js"></script>
 </body>
+
 </html>
