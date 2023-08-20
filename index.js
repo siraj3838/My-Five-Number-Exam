@@ -57,8 +57,10 @@ document.getElementById('apply-button').addEventListener('click', function () {
     let total = parseFloat(searchPrice.innerText);
 
     if (couponValue.value === 'SELL200') {
+        // discount amount
         const discount20 = total * 0.2;
         discount.innerText = discount20.toFixed(2);
+        // after discount total
         const totalAfter = total - discount20;
         searchPrice.innerText = total.toFixed(2);
         afterDiscountPrice.innerText = totalAfter.toFixed(2);
