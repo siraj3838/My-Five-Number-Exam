@@ -1,29 +1,3 @@
-// total cost
-
-let total = 0;
-function toTouch(target) {
-    const priceTag = target.childNodes[1].childNodes[13].childNodes[0].innerText;
-    const price = parseFloat(priceTag);
-    total = total + price;
-    const searchPrice = document.getElementById('total-price-output');
-    searchPrice.innerText = total.toFixed(2);
-    if (total > 0) {
-        const purchaseBtn = document.getElementById('purchase-btn');
-        purchaseBtn.removeAttribute('disabled');
-    } else {
-        purchaseBtn.setAttribute('disabled');
-    }
-    const totalPrice = document.getElementById('total-price-output').innerText;
-    if (totalPrice >= 200) {
-        const discount = document.getElementById('total-discount-output');
-        const discountPrice = parseFloat(discount);
-        const discount20 = totalPrice * 0.2;
-        discount.innerText = discount20.toFixed(2)
-    }
-}
-
-
-
 // first section item name send to order
 function toTouch2(target2) {
     const itemName = target2.childNodes[1].childNodes[11].innerText;
@@ -49,12 +23,52 @@ function toTouch4(target4) {
     receiveProperty.appendChild(h3);
 }
 
-document.getElementById('input-value').addEventListener('keyup', function (e) {
-    const inputValue = e.target.value;
-    const discountBtn = document.getElementById('discount-button');
-    if (inputValue === 'SELL200') {
-        discountBtn.removeAttribute('disabled');
+// total cost for item
+
+let total = 0;
+function toTouch(target) {
+    const priceTag = target.childNodes[1].childNodes[13].childNodes[0].innerText;
+    let price = parseFloat(priceTag);
+    total = total + price;
+    const searchPrice = document.getElementById('total-price-output');
+    searchPrice.innerText = total.toFixed(2);
+    const purchaseBtn = document.getElementById('purchase-btn');
+    const applyBtn = document.getElementById('apply-button');
+    if (total > 0) {
+        purchaseBtn.removeAttribute('disabled');
     } else {
-        discountBtn.setAttribute('disabled', true)
+        purchaseBtn.setAttribute('disabled', 'disabled');
     }
+
+    if (total >= 200) {
+        applyBtn.removeAttribute('disabled');
+    } else {
+        applyBtn.setAttribute('disabled', 'disabled');
+    }
+}
+
+// discount and after total pay
+
+document.getElementById('apply-button').addEventListener('click', function () {
+    const couponValue = document.getElementById('coupon-input-value');
+    const discount = document.getElementById('total-discount-output');
+    const searchPrice = document.getElementById('total-price-output');
+    const afterDiscountPrice = document.getElementById('discount-after-total');
+    let total = parseFloat(searchPrice.innerText);
+
+    if (couponValue.value === 'SELL200') {
+        const discount20 = total * 0.2;
+        discount.innerText = discount20.toFixed(2);
+        const totalAfter = total - discount20;
+        searchPrice.innerText = total.toFixed(2);
+        afterDiscountPrice.innerText = totalAfter.toFixed(2);
+    } else {
+        discount.innerText = '0.00';
+        afterDiscountPrice.innerText = total.toFixed(2);
+    }
+});
+
+// make purchase button click
+document.getElementById('go-home').addEventListener('click', function () {
+    window.location.href = "index.html";
 })
