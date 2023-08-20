@@ -1,27 +1,30 @@
 // first section item name send to order
 function toTouch2(target2) {
     const itemName = target2.childNodes[1].childNodes[11].innerText;
-    const h3 = document.createElement('h3');
-    h3.innerText = itemName;
+    const li = document.createElement('li');
+    li.innerText = itemName;
+    li.style.listStyle = 'number';
     const receiveProperty = document.getElementById('send-first-item-name');
-    receiveProperty.appendChild(h3);
-}
+    receiveProperty.appendChild(li);
+};
 // second section item name send to order
 function toTouch3(target3) {
     const itemName = target3.childNodes[1].childNodes[11].innerText;
-    const h3 = document.createElement('h3');
-    h3.innerText = itemName;
+    const li = document.createElement('li');
+    li.innerText = itemName;
+    li.style.listStyle = 'number';
     const receiveProperty = document.getElementById('send-second-item-name');
-    receiveProperty.appendChild(h3);
-}
+    receiveProperty.appendChild(li);
+};
 // third section item name send to order
 function toTouch4(target4) {
     const itemName = target4.childNodes[1].childNodes[11].innerText;
-    const h3 = document.createElement('h3');
-    h3.innerText = itemName;
+    const li = document.createElement('li');
+    li.innerText = itemName;
+    li.style.listStyle = 'number';
     const receiveProperty = document.getElementById('send-third-item-name');
-    receiveProperty.appendChild(h3);
-}
+    receiveProperty.appendChild(li);
+};
 
 // total cost for item
 
@@ -45,7 +48,7 @@ function toTouch(target) {
     } else {
         applyBtn.setAttribute('disabled', 'disabled');
     }
-}
+};
 
 // discount and after total pay
 
@@ -73,4 +76,4 @@ document.getElementById('apply-button').addEventListener('click', function () {
 // make purchase button click
 document.getElementById('go-home').addEventListener('click', function () {
     window.location.href = "index.html";
-})
+});
