@@ -7,24 +7,6 @@ function toTouch2(target2) {
     const receiveProperty = document.getElementById('send-first-item-name');
     receiveProperty.appendChild(li);
 };
-// second section item name send to order
-function toTouch3(target3) {
-    const itemName = target3.childNodes[1].childNodes[11].innerText;
-    const li = document.createElement('li');
-    li.innerText = itemName;
-    li.style.listStyle = 'number';
-    const receiveProperty = document.getElementById('send-second-item-name');
-    receiveProperty.appendChild(li);
-};
-// third section item name send to order
-function toTouch4(target4) {
-    const itemName = target4.childNodes[1].childNodes[11].innerText;
-    const li = document.createElement('li');
-    li.innerText = itemName;
-    li.style.listStyle = 'number';
-    const receiveProperty = document.getElementById('send-third-item-name');
-    receiveProperty.appendChild(li);
-};
 
 // total cost for item
 
@@ -35,6 +17,8 @@ function toTouch(target) {
     total = total + price;
     const searchPrice = document.getElementById('total-price-output');
     searchPrice.innerText = total.toFixed(2);
+    const beforeDiscountPrice = document.getElementById('discount-after-total');
+    beforeDiscountPrice.innerText = total.toFixed(2);
     const purchaseBtn = document.getElementById('purchase-btn');
     const applyBtn = document.getElementById('apply-button');
     if (total > 0) {
@@ -63,7 +47,7 @@ document.getElementById('apply-button').addEventListener('click', function () {
         // discount amount
         const discount20 = total * 0.2;
         discount.innerText = discount20.toFixed(2);
-        // after discount total
+        // discount after total
         const totalAfter = total - discount20;
         searchPrice.innerText = total.toFixed(2);
         afterDiscountPrice.innerText = totalAfter.toFixed(2);
