@@ -1,5 +1,5 @@
 // first section item name send to order
-function toTouch2(target2) {
+function itemNameOutput(target2) {
     const itemName = target2.childNodes[1].childNodes[11].innerText;
     const li = document.createElement('li');
     li.innerText = itemName;
@@ -11,7 +11,7 @@ function toTouch2(target2) {
 // total cost for item
 
 let total = 0;
-function toTouch(target) {
+function itemPriceOutput(target) {
     const priceTag = target.childNodes[1].childNodes[13].childNodes[0].innerText;
     let price = parseFloat(priceTag);
     total = total + price;
